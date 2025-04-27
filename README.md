@@ -19,5 +19,4 @@ which could be dangerous sometimes if you try to close the server or for example
 -       **compiled**:     ./server 127.0.0.1 443
                           ./client 127.0.0.1 443 /path/to/your/file.txt
 
-- **Contributing**: Encourages others to contribute to the project.
-
+         
