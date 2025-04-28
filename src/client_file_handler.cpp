@@ -11,14 +11,14 @@ int open_file(string file_name){
 }
 
 bool is_binary_file(string file_name) {
-    ifstream file(file_name, std::ios::binary); 
+    ifstream file(file_name, ios::binary); 
     char ch;
     int byte_count = 0;
     int non_printable_count = 0;
     
     // Read up to 1024 bytes
     while (file.get(ch) && byte_count < 1024) {
-        if (!std::isprint(static_cast<unsigned char>(ch)) && ch != '\n' && ch != '\r' && ch != '\t') {
+        if (!isprint(static_cast<unsigned char>(ch)) && ch != '\n' && ch != '\r' && ch != '\t') {
             non_printable_count++;
         }
         byte_count++;
