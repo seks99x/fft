@@ -27,9 +27,9 @@ bool isValidIP(const string& ip) {
 
 
 
-string extract_filename(const std::string& filepath) {
+string extract_filename(const string& filepath) {
     size_t pos = filepath.find_last_of("/\\");
-    if (pos == std::string::npos) return filepath;
+    if (pos == string::npos) return filepath;
     return filepath.substr(pos + 1);
 }
 
@@ -105,7 +105,7 @@ int main(int argc, char* argv[]) {
 	cout << file_name_len; // convert back from network byte order
   // Increased buffer size to 32
 
-    std::vector<char> filename(file_name_len + 1); // +1 for null termination
+    vector<char> filename(file_name_len + 1); // +1 for null termination
 
 	if (recv(client_socket, filename.data(), file_name_len, 0) <= 0) {
 		cerr << "Failed to receive filename\n";
